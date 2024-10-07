@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'ua.shamrai'
+version = '0.01-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+    implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.23.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
